@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 def index0(request):           
     return render(request, 'home-left/index0.html', context=locals()) 
 
+def index1(request):           
+    return render(request, 'home-left/index1.html', context=locals()) 
 
 #-----------------------------------------------------------------#
 
