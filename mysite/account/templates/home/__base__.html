@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+ {% block head %}
+     <link href="/static/css/my_bootstra.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+ {% endblock %}
+
+{% block body %} 
+{% load i18n %}
+ <!--顶部菜单-->
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">管理系统</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">首页 <span class="sr-only">(current)</span></a></li>
+                <li><a href="/index0/"> 只有左测菜单<span class="sr-only">(current)</span></a></li>
+                <li><a href=""> test2<span class="sr-only">(current)</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">顶部左测菜单 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <small>业务功能</small>
+                        </li>
+                        <li><a href="/progress/">进度条</a></li>
+                        <li><a href="/table/">表格</a></li>
+                        <li><a href="/img/">缩位图</a></li>
+                        <li><a href="/bar/chart/"> 数据可视图1</a></li>
+                        <li><a href="/bar/chart2/"> 数据可视图2</a></li>
+  
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <small>系统功能</small>
+                        </li>
+                        <li><a href="#">设置</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+
+            <li> <!-- 搜索框 如何居右?  -->
+              <form method="post" action="/searc/" class="navbar-form navbar-right" rol="search">
+                {% csrf_token %}
+                <div class="form-group" >
+                  <input name='q' type="text" class="form-control" placeholder="请输入关键词" />
+                </div>
+                <button type="submit" class="btn btn-default">搜 索</button>
+            </form>
+           </li>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+
+     <div style="height: 70px;width: 100%;"></div>
+
+
+    <!-- 侧滑菜单 -->
+    <div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       Bootstrap 3
+                    </a>
+                </li>
+                <li>
+                    <a href="/"><i class="fa fa-fw fa-home"></i>管理系统</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-folder"></i> Page one</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-file-o"></i> Second page</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+         <div style="float: left; margin-top:-30px; margin-right:30px;" >
+         
+         {% block content %} {% endblock %}
+            
+        </div>
+        <!-- Page Content -->
+        <div style="float: right; margin-right:50px;">
+          <button type="button" class="hamburger is-closed animated " data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+ 
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      </div>
+ </div> <!-- 侧滑菜单END -->
+
+{% endblock %}
+
+{% block js %}
+   <script src="/static/js/my_bootstra.js"></script>
+{% endblock %}

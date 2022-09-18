@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+ {% load i18n %}
+ {% block head %}
+     <link href="/static/css/my_bootstra0.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+ {% endblock %}
+
+{% block body %} 
+	<!-- 侧滑菜单 -->
+    <div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                       Bootstrap 3  
+                    </a>
+                </li>
+                <li>
+                    <a href="/index0/"><i class="fa fa-fw fa-home"></i>2X2布局数据可视</a>
+                </li>
+                <li>
+                    <a href="/index1/"><i class="fa fa-fw fa-folder"></i> Page one</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-file-o"></i> Second page</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    
+                  </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+	</div> <!-- 侧滑菜单END -->
+     
+                         
+	<div style="float:right; margin-right:60px;">
+ 		<button type="button" class="hamburger is-closed animated " data-toggle="offcanvas">
+    		<span class="hamb-top"></span>
+        	<span class="hamb-middle"></span>
+        	<span class="hamb-bottom"></span>
+		</button>			
+ 	</div>
+ 	
+ 	{% block content %} {% endblock %}  
+ 	     
+{% endblock %}
+
+{% block js %}
+   <script src="/static/js/my_bootstra.js"></script>
+{% endblock %}

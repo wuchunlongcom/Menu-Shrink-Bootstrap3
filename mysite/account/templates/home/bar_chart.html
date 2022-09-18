@@ -1,0 +1,194 @@
+{% extends "home/__base__.html" %}
+{% block content %}
+
+<div style="margin-top:30px; ">
+
+  <div class="col-xs-6">
+   <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main1" style="width: 600px;height:500px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+ 
+        // 指定图表的配置项和数据
+        var option = {
+            
+            //下载图片
+            toolbox: {
+    　　　　     show: true,
+    　　        feature: {
+    　　　　        saveAsImage: {
+    　　　　          show:true,
+    　　　　           excludeComponents :['toolbox'],
+    　　　　           pixelRatio: 2
+    　　　　        }
+    　　        }
+            },
+
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+ 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>                        
+  </div> 
+   
+  <div class="col-xs-6">
+   <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main2" style="width: 600px;height:500px;"></div>
+    <script type="text/javascript">
+    var dom = document.getElementById('main2');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      type: 'line',
+      smooth: true
+    }
+  ]
+};
+
+    myChart.setOption(option);
+  </script>     
+  </div> 
+  
+   <div class="col-xs-6">
+   <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+  <div id="main3" style="width: 600px;height:500px; margin: 0"></div>  
+  <script type="text/javascript">
+    var dom = document.getElementById('main3');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  legend: {},
+  tooltip: {},
+  dataset: {
+    dimensions: ['product', '2015', '2016', '2017'],
+    source: [
+      { product: 'Matcha Latte', 2015: 43.3, 2016: 85.8, 2017: 93.7 },
+      { product: 'Milk Tea', 2015: 83.1, 2016: 73.4, 2017: 55.1 },
+      { product: 'Cheese Cocoa', 2015: 86.4, 2016: 65.2, 2017: 82.5 },
+      { product: 'Walnut Brownie', 2015: 72.4, 2016: 53.9, 2017: 39.1 }
+    ]
+  },
+  xAxis: { type: 'category' },
+  yAxis: {},
+  // Declare several bar series, each will be mapped
+  // to a column of dataset.source by default.
+  series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
+};
+
+    myChart.setOption(option);
+  </script>                    
+  </div> 
+   
+  <div class="col-xs-6">
+ 
+  <div id="main4" style="width: 600px; height: 500px; margin: 0"></div>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('main4');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  series: [
+    {
+      type: 'gauge',
+      axisLine: {
+        lineStyle: {
+          width: 30,
+          color: [
+            [0.3, '#67e0e3'],
+            [0.7, '#37a2da'],
+            [1, '#fd666d']
+          ]
+        }
+      },
+      pointer: {
+        itemStyle: {
+          color: 'auto'
+        }
+      },
+      axisTick: {
+        distance: -30,
+        length: 8,
+        lineStyle: {
+          color: '#fff',
+          width: 2
+        }
+      },
+      splitLine: {
+        distance: -30,
+        length: 30,
+        lineStyle: {
+          color: '#fff',
+          width: 4
+        }
+      },
+      axisLabel: {
+        color: 'auto',
+        distance: 40,
+        fontSize: 20
+      },
+      detail: {
+        valueAnimation: true,
+        formatter: '96 km/h',
+        color: 'auto'
+      },
+      data: [
+        {
+          value: 96
+        }
+      ]
+    }
+  ]
+};
+
+  myChart.setOption(option);   
+   </script>
+ </div>
+</div>
+ 
+{% endblock %}
