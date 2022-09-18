@@ -1,4 +1,4 @@
-###功能   后端：python3.7.5   django2.2.6
+## 功能   后端：python3.7.5   django2.2.6
 ```
 前端：Bootstrap3  菜单可收缩
 1、轮播图片；
@@ -8,7 +8,7 @@
 5、表格      
 ```
 
-###使用
+## 使用
 ```
 一、运行 
 1、运行：./start.sh 
@@ -21,7 +21,7 @@ admin/admin
 http://localhost:8000/
 ```
 
-###数据可视化资料
+## 数据可视化资料
 ```
 官网： https://www.echartsjs.com/
 史上最全echarts可视化图表详解 https://blog.csdn.net/Shids_/article/details/121246275
