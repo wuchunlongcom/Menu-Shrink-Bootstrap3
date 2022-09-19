@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load i18n %}
-<html lang="zh-Hans">
+  <html lang="zh-CN" style="height: 100%">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +10,10 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>{% block title %}{% trans 'ECUST CourseInfo' %}{% endblock %}</title>
+    <title>{% block title %}{% trans 'admin Bootstrap' %}{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="/static/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -28,20 +28,25 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts-en.js"></script> 
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> 
     
   
     {% block head %}{% endblock %}
   </head>
 
   <body>
-  <div class="navbar-header">
+  
+<!--   <div class="navbar-header">
     <a class="navbar-brand" href="#">
         <img alt="Brand" style="max-width:200px;margin-top:-7px;" src="/static/assets/img/logo.png">
     </a>
-  </div>
+  </div> -->
+  
 	{% block body %}{% endblock %}
+	
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
      {% block js %}{% endblock %}

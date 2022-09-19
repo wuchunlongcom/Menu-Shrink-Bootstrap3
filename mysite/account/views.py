@@ -21,7 +21,7 @@ def index2(request):
 
 # http://localhost:8000/ 
 def index(request):           
-    return render(request, 'home/index.html', context=locals()) 
+    return render(request, 'home-left/index.html', context=locals()) 
 
 
 def progress(request):           
