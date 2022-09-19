@@ -14,6 +14,9 @@ def index0(request):
 def index1(request):           
     return render(request, 'home-left/index1.html', context=locals()) 
 
+def index2(request):           
+    return render(request, 'home-left/index2.html', context=locals()) 
+
 #-----------------------------------------------------------------#
 
 # http://localhost:8000/ 

@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^bar/chart/$', views.bar_chart, name='bar_chart'), 
     url(r'^bar/chart2/$', views.bar_chart2, name='bar_chart2'),
     url(r'index/$', views.index, name='index'),   
-    url(r'index1/$', views.index1, name='index1'), 
-    url(r'', views.index0, name='index0'),   #必须放在最后
+    url(r'index0/$', views.index0, name='index0'),
+    url(r'index2/$', views.index2, name='index2'), 
+    url(r'', views.index1, name='index1'),   #必须放在最后
 ]
