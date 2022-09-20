@@ -7,21 +7,26 @@ from django.contrib.auth.decorators import login_required
 
 
 
-# http://localhost:8000/ 
 def index0(request):           
-    return render(request, 'home-left/index0.html', context=locals()) 
+    return render(request, 'mobile-phone/index0.html', context=locals()) 
 
 def index1(request):           
-    return render(request, 'home-left/index1.html', context=locals()) 
+    return render(request, 'mobile-phone/index1.html', context=locals()) 
 
 def index2(request):           
-    return render(request, 'home-left/index2.html', context=locals()) 
+    return render(request, 'mobile-phone/index2.html', context=locals()) 
+
+def index3(request):           
+    return render(request, 'mobile-phone/index3.html', context=locals()) 
+
+def index4(request):           
+    return render(request, 'mobile-phone/index4.html', context=locals()) 
 
 #-----------------------------------------------------------------#
 
 # http://localhost:8000/ 
 def index(request):           
-    return render(request, 'home-left/index.html', context=locals()) 
+    return render(request, 'home/index.html', context=locals()) 
 
 
 def progress(request):           

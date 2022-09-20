@@ -28,7 +28,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    
+     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
+   
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     
   
@@ -42,9 +44,7 @@
     </a>
   </div>
 	{% block body %}{% endblock %}
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
-     {% block js %}{% endblock %}
+    
   </body>
   
 </html>

@@ -1,10 +1,17 @@
 {% extends "base.html" %}
  {% block head %}
      <link href="/static/css/my_bootstra.css" rel="stylesheet">
+    
         <!--[if lt IE 9]>
           <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
           <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts-en.js"></script> 
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+    <script src="/static/js/my_bootstra.js"></script>
  {% endblock %}
 
 {% block body %} 
@@ -20,7 +27,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">首页 <span class="sr-only">(current)</span></a></li>
-                <li><a href="/index0/"> 只有左测菜单<span class="sr-only">(current)</span></a></li>
+                <li><a href="/index0/"> 手机菜单<span class="sr-only">(current)</span></a></li>
                 <li><a href=""> test2<span class="sr-only">(current)</span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -135,6 +142,3 @@
 
 {% endblock %}
 
-{% block js %}
-   <script src="/static/js/my_bootstra.js"></script>
-{% endblock %}

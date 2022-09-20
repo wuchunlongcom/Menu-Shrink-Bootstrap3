@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+{% load i18n %}
+<div class="container theme-showcase" role="main">
+    <div class="col-md-12 column jumbotron">
+            <div class="text-center" /><h3 style="margin-top:-10px; ">{% trans 'Course Search' %}<h3></div>
+            <a href='/index0/' class="btn btn-lg btn-danger btn-block">{% trans 'Search by Classroom' %}</a><br>
+            <a href='/index1/' class="btn btn-lg btn-danger btn-block">{% trans 'Search by Course' %}</a><br>
+            <a href='/index2/' class="btn btn-lg btn-danger btn-block">{% trans 'Search by Teacher' %}</a><br>
+            <a href='/index3/' class="btn btn-lg btn-danger btn-block">{% trans 'Search by Teacher' %}</a>
+                
+    </div>
+
+ 
+      <div class="col-xs-6 col-sm-6" 
+           style="background-color: #fff;
+         box-shadow: inset 1px -1px 1px #fff, inset -1px 1px 1px #fff;">       
+         <a href='/index4/' class="btn btn-lg btn-success btn-block" >按钮4</a>
+      </div>
+      <div class="col-xs-6 col-sm-6" 
+          style="background-color: #fff;
+         box-shadow: inset 1px -1px 1px #fff, inset -1px 1px 1px #fff;">       
+         <a href='/index/' class="btn btn-lg btn-success btn-block" >首页</a>
+      </div>
+
+      
+
+
+     
+</div>
+{% endblock %}
