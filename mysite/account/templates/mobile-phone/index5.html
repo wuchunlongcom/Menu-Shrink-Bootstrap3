@@ -1,0 +1,63 @@
+{% extends "mobile-phone/layout.html" %}
+{% block body %}
+{% load i18n %}
+
+<style type="text/css">
+.logo-f00{
+    color: #f00;
+    font-size: 96px;
+}
+.logo-000{
+    color: #000;
+    font-size: 96px;
+}
+</style>
+
+<div class="container theme-showcase" role="main">
+    <div class="col-xs-12 ">
+ 		<div class="text-center column column" /><h3>开关控制<h3></div>
+ 
+      	<div class="col-xs-6 col-sm-6 column" >    
+    		<a  href="/index0/">
+       			<span class="glyphicon glyphicon-lg glyphicon-off logo-f00"></span>      			
+    		</a><br>
+    		<div style="padding-left:46px;">开灯</div>   		
+      	</div>     	     	
+      	<div class="col-xs-6 col-sm-6" >    
+    		<a  href="/index1/">
+       			<span class="glyphicon glyphicon-lg glyphicon-off logo-000"></span>
+    		</a><br>
+    		<div style="padding-left:46px;">关灯</div>
+      	</div>
+   </div> 
+   <div class="col-xs-12 "><br>
+      	<div class="col-xs-6 col-sm-6 column" >    
+    		<a  href="/index2">
+       			<span class="glyphicon glyphicon-lg glyphicon-off logo-f00"></span>      			
+    		</a><br>
+    		<div style="padding-left:46px;">开灯</div>   		
+      	</div>     	     	
+      	<div class="col-xs-6 col-sm-6" >    
+    		<a  href="/index3">
+       			<span class="glyphicon glyphicon-lg glyphicon-off logo-000"></span>
+    		</a><br>
+    		<div style="padding-left:46px;">关灯</div>
+      	</div>  
+  </div>    	
+
+   <div class="col-xs-12 "><br>
+      	<div class="col-xs-6 col-sm-6 column" >    
+    		<a  href="/index4/">
+       			<span class="glyphicon glyphicon-knight glyphicon-off logo-f00"></span>      			
+    		</a><br>
+    		<div style="padding-left:46px;">开灯</div>   		
+      	</div>     	     	
+      	<div class="col-xs-6 col-sm-6" >    
+    		<a  href="/index5/">
+       			<span class="glyphicon glyphicon-king glyphicon-off logo-000"></span>
+    		</a><br>
+    		<div style="padding-left:46px;">关灯</div>
+      	</div>  
+  </div>        	
+</div>
+{% endblock %}

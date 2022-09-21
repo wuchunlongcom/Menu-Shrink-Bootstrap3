@@ -1,74 +1,46 @@
-{% extends "base.html" %}
- {% load i18n %}
- {% block head %}
-     <link href="/static/css/my_bootstra0.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
- {% endblock %}
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
 
-{% block body %} 
-	<!-- 侧滑菜单 -->
-    <div id="wrapper">
-        <div class="overlay"></div>
+    <title>{% block title %}{% trans 'ECUST CourseInfo' %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/static/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="/static/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
+   
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     
-        <!-- Sidebar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-            <ul class="nav sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/">
-                       Bootstrap 3  
-                    </a>
-                </li>
-                <li>
-                    <a href="/index0/"><i class="fa fa-fw fa-home"></i>2X2布局数据可视</a>
-                </li>
-                <li>
-                    <a href="/index1/"><i class="fa fa-fw fa-folder"></i> index1</a>
-                </li>
-                <li>
-                     <a href="/index2/"><i class="fa fa-fw fa-folder"></i> index2</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">Dropdown heading</li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    
-                  </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /#sidebar-wrapper -->
-	</div> <!-- 侧滑菜单END -->
-     
-                         
-	<div style="float:right; margin-right:60px;">
- 		<button type="button" class="hamburger is-closed animated " data-toggle="offcanvas">
-    		<span class="hamb-top"></span>
-        	<span class="hamb-middle"></span>
-        	<span class="hamb-bottom"></span>
-		</button>			
- 	</div>
- 	
- 	{% block content %} {% endblock %}  
- 	     
-{% endblock %}
+  
+    {% block head %}{% endblock %}
+  </head>
 
-{% block js %}
-   <script src="/static/js/my_bootstra.js"></script>
-{% endblock %}
+  <body>
+ 
+	{% block body %}{% endblock %}
+    
+  </body>
+  
+</html>

@@ -22,6 +22,10 @@ def index3(request):
 def index4(request):           
     return render(request, 'mobile-phone/index4.html', context=locals()) 
 
+def index5(request):           
+    return render(request, 'mobile-phone/index5.html', context=locals()) 
+
+
 #-----------------------------------------------------------------#
 
 # http://localhost:8000/ 
